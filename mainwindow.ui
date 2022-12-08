@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="windowModality">
+   <enum>Qt::WindowModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>694</width>
+    <height>340</height>
+   </rect>
+  </property>
+  <property name="focusPolicy">
+   <enum>Qt::ClickFocus</enum>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QProgressBar {
+    border: 2px solid grey;
+    border-radius: 5px;
+}
+
+QProgressBar::chunk {
+    background-color: #05B8CC;
+    width: 20px;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(51, 26, 255);</string>
+        </property>
+        <property name="text">
+         <string>Host</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineHost">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(51, 26, 255);</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_5">
+        <property name="styleSheet">
+         <string>color: rgb(51, 26, 255);</string>
+        </property>
+        <property name="text">
+         <string>Current</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QSpinBox" name="spinCurrent">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 254, 39);
+background-color: rgba(126, 147, 255, 242);</string>
+        </property>
+        <property name="maximum">
+         <number>99999</number>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_2">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(51, 26, 255);</string>
+        </property>
+        <property name="text">
+         <string>From Port</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QSpinBox" name="spinPortFrom">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(51, 26, 255);</string>
+        </property>
+        <property name="maximum">
+         <number>99999</number>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_3">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(51, 26, 255);</string>
+        </property>
+        <property name="text">
+         <string>To Port</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QSpinBox" name="spinPortTo">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(51, 26, 255);</string>
+        </property>
+        <property name="maximum">
+         <number>99999</number>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_4">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(51, 26, 255);</string>
+        </property>
+        <property name="text">
+         <string>Interval</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QSpinBox" name="spinInterval">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(51, 26, 255);</string>
+        </property>
+        <property name="maximum">
+         <number>5000</number>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QPlainTextEdit" name="plainLog">
+      <property name="styleSheet">
+       <string notr="true">color: rgb(94, 255, 44);
+background-color: rgba(11, 36, 118, 207);</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QProgressBar" name="progressBar">
+        <property name="styleSheet">
+         <string notr="true">QProgressBar::chunk {
+    background-color: #7289DA;
+    width: 10px;
+    margin: 0.5px;
+}</string>
+        </property>
+        <property name="value">
+         <number>24</number>
+        </property>
+        <property name="textVisible">
+         <bool>false</bool>
+        </property>
+        <property name="textDirection">
+         <enum>QProgressBar::BottomToTop</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="labelProgress">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 40, 255);</string>
+        </property>
+        <property name="text">
+         <string>0/?</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(62, 94, 196, 120);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="sourceFiles.qrc">
+        <normaloff>:/sources/files/1490957.png</normaloff>:/sources/files/1490957.png</iconset>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>694</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(0, 2, 255);</string>
+   </property>
+   <widget class="QMenu" name="menuOptions">
+    <property name="focusPolicy">
+     <enum>Qt::ClickFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(20, 55, 255);</string>
+    </property>
+    <property name="title">
+     <string>Options</string>
+    </property>
+    <addaction name="actionScann"/>
+    <addaction name="actionStop_Scan"/>
+   </widget>
+   <addaction name="menuOptions"/>
+  </widget>
+  <action name="actionScann">
+   <property name="icon">
+    <iconset resource="sourceFiles.qrc">
+     <normaloff>:/sources/files/1490957.png</normaloff>:/sources/files/1490957.png</iconset>
+   </property>
+   <property name="text">
+    <string>Scan Host</string>
+   </property>
+  </action>
+  <action name="actionStop_Scan">
+   <property name="icon">
+    <iconset resource="sourceFiles.qrc">
+     <normaloff>:/sources/files/stop.ico</normaloff>:/sources/files/stop.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Stop Scan</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="sourceFiles.qrc"/>
+ </resources>
+ <connections/>
+</ui>
